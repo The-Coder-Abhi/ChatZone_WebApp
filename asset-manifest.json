@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ChatZone_WebApp/static/css/main.b9106c9b.css",
-    "main.js": "/ChatZone_WebApp/static/js/main.f151adfd.js",
+    "main.js": "/ChatZone_WebApp/static/js/main.3cfbd8c3.js",
     "static/media/User.png": "/ChatZone_WebApp/static/media/User.08fc726131de55cbee97.png",
     "static/media/doodles.png": "/ChatZone_WebApp/static/media/doodles.42f220c50911b1b3d5bc.png",
     "static/media/CatCity.png": "/ChatZone_WebApp/static/media/CatCity.4f2a54cb9917feb6e889.png",
@@ -15,10 +15,10 @@
     "static/media/NewChatZone2.0.png": "/ChatZone_WebApp/static/media/NewChatZone2.0.e6c6528a77ee6d72be7e.png",
     "index.html": "/ChatZone_WebApp/index.html",
     "main.b9106c9b.css.map": "/ChatZone_WebApp/static/css/main.b9106c9b.css.map",
-    "main.f151adfd.js.map": "/ChatZone_WebApp/static/js/main.f151adfd.js.map"
+    "main.3cfbd8c3.js.map": "/ChatZone_WebApp/static/js/main.3cfbd8c3.js.map"
   },
   "entrypoints": [
     "static/css/main.b9106c9b.css",
-    "static/js/main.f151adfd.js"
+    "static/js/main.3cfbd8c3.js"
   ]
 }
