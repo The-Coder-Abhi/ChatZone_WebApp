@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ChatZone_WebApp/static/css/main.2bad1189.css",
+    "main.js": "/ChatZone_WebApp/static/js/main.a2306a2d.js",
+    "static/media/User.png": "/ChatZone_WebApp/static/media/User.08fc726131de55cbee97.png",
+    "static/media/doodles.png": "/ChatZone_WebApp/static/media/doodles.42f220c50911b1b3d5bc.png",
+    "static/media/CatCity.png": "/ChatZone_WebApp/static/media/CatCity.4f2a54cb9917feb6e889.png",
+    "static/media/UploadImageBackground.png": "/ChatZone_WebApp/static/media/UploadImageBackground.5205567a00db8a016349.png",
+    "static/media/ChatCats.png": "/ChatZone_WebApp/static/media/ChatCats.0a45bd6f92e2b71d26df.png",
+    "static/media/Luna.png": "/ChatZone_WebApp/static/media/Luna.829ffa990e0ad25d5e72.png",
+    "static/media/Angelina.png": "/ChatZone_WebApp/static/media/Angelina.6c8dc0e4634b641d968c.png",
+    "static/media/Tim.png": "/ChatZone_WebApp/static/media/Tim.938fd845a0d16d57c8e0.png",
+    "static/media/John.png": "/ChatZone_WebApp/static/media/John.dd6514e0ce651435a4b2.png",
+    "static/media/VerifyIcon.png": "/ChatZone_WebApp/static/media/VerifyIcon.1de4fc2dfefb3a69a6f0.png",
+    "static/media/NewChatZone2.0.png": "/ChatZone_WebApp/static/media/NewChatZone2.0.e6c6528a77ee6d72be7e.png",
+    "index.html": "/ChatZone_WebApp/index.html",
+    "main.2bad1189.css.map": "/ChatZone_WebApp/static/css/main.2bad1189.css.map",
+    "main.a2306a2d.js.map": "/ChatZone_WebApp/static/js/main.a2306a2d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bad1189.css",
+    "static/js/main.a2306a2d.js"
+  ]
+}
