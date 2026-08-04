@@ -1,0 +1,125 @@
+.signUp-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* background-image:url("../../img/doodles.png");
+  background-size: cover;
+  background-position: center; */
+  background-image: url(../../img/CatCity.png),radial-gradient(circle, #ffffff 30%, #73e0e8 100%);
+  background-size: 75%, cover; /* Doodles at 300px, gradient covers the rest */
+  background-repeat: repeat, no-repeat; /* Repeat the doodles, keep gradient fixed */
+  background-position: center;
+  background-blend-mode: multiply;
+  overflow-y: auto;
+}
+.signUp-wrapper::-webkit-scrollbar{
+  display: none;
+}
+.signUp-container {
+    background: rgba(255, 255, 255, 0.75); /* Semi-transparent white */
+    backdrop-filter: blur(12px); /* blurred background effect */
+    -webkit-backdrop-filter: blur(12px); /* For Safari support */
+    padding: 40px;
+    margin: 3rem auto;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.signUp-title {
+    /* font-family: 'Permanent Marker', cursive; Matches the marker-style font */
+    color: #00e5ff; /* Cyan color */
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.signUp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input-group label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 8px;
+    color: #000;
+}
+.input-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;
+  background-color: #e0e0e0; /* Light gray background */
+  border-bottom: 2px solid #a0a0a0; /* Darker gray bottom border */
+  padding: 10px 15px;
+  border-radius: 4px 4px 0 0;
+}
+.input-with-icon {
+  display: flex;
+  flex-direction: row;
+}
+.input-icon {
+  color: #666;
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.input-container input {
+  flex: 1;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+}
+.name-row{
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+.name-row .input-container{
+  flex: 1;
+}
+
+.input-container input::placeholder {
+  color: #777;
+}
+.select-btn {
+  background-color: #00e5ff;
+  width: 30%;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition:transform 0.2s,background-color 0.2s;
+}
+.input-with-btn {
+  display: flex;
+  flex-direction: row;
+}
+.signUp-btn{
+  background-color: #00E5FF;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.signUp-btn:hover {
+  background-color: #00cce6;
+  transform: translateY(-2px);
+}
+
+.signUp-btn:active {
+  transform: translateY(0);
+}

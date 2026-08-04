@@ -1,0 +1,60 @@
+.fragmentMenu_Wrapper{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    overflow: visible; 
+}
+.fragmentMenu_Container{
+    /* border: 1px solid red; */
+    /* padding-top: 10vh; */
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: visible;
+}
+.Fragments {
+    /* border: 1px solid var(--grey-color); */
+    box-shadow: 6px 0px 8px -2px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--grey-color);
+    transition: all 0.25s ;
+}
+.Fragments:hover{
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    z-index: 2;
+}
+.Fragments:active{
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+.active{
+    border-left: 5px solid var(--primary-color);
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+.fragment_Icon{
+    font-size: 1.5rem;
+}
+/* for mobile screens */
+@media screen and (max-width: 768px) {
+    .fragmentMenu_Container {
+        flex-direction: row; /* Horizontal icons instead of vertical */
+    }
+    .Fragments {
+        box-shadow: none;
+    }
+    .active {
+        border-left: none;
+        border-top: 4px solid var(--primary-color);
+    }
+}

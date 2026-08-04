@@ -1,0 +1,71 @@
+.welcomeWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    /* background-image: url(../../img/doodles.png),radial-gradient(circle, #ffffff 30%, #73e0e8 100%);
+    background-size: 75%, cover; /* Doodles at 300px, gradient covers the rest */
+    /* background-repeat: repeat, no-repeat; Repeat the doodles, keep gradient fixed */
+    /* background-position: center;
+    background-blend-mode: multiply; */
+    padding: 2rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcomeWrapper img{
+    width: 50vw;
+    border-radius: 7%;
+}
+.welcomeText{
+    /* border:2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.welcomeText h1{
+    font-family: var(--heading-font);
+    font-size: 8rem;
+    color: var(--primary-color);
+}
+
+.welcomeText h3{
+    font-size: 2.5rem;
+}
+
+.welcomeText h4{
+    font-size: 1.5rem;
+}
+.btn-wrapper{
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .welcomeText h1{
+    font-size: 6rem;
+}
+.welcomeText h3{
+    font-size: 1.5rem;
+}
+
+.welcomeText h4{
+    font-size: 1rem;
+}
+.btn-wrapper{
+    width: 100vw;
+}
+.welcomeWrapper img{
+    width: 90vw;
+}
+
+}

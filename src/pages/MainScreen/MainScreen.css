@@ -1,0 +1,57 @@
+.mainScreen_Wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevents the entire page from accidentally scrolling */
+    background-color: var(--white-color, #ffffff); 
+}
+
+/* 2. The container sets up the left/right Flexbox split */
+.mainScreen_Container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* 3. The left sidebar zone */
+.sidebar-section {
+    width: 5vw; /* You can change this to 10vw if you prefer the wider 10% look */
+    min-width: 60px; /* Ensures icons don't get squished on small laptop screens */
+    height: 100%;
+    position: relative; 
+    z-index: 5; 
+    overflow: visible;
+}
+
+/* 4. The right side zone (Holds Header + Content) */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Automatically takes up all remaining width */
+    height: 100%;
+}
+
+/* 5. The workspace zone (Where your chats will go) */
+.content-section {
+    display: flex;
+    flex-grow: 1; /* Automatically takes up all remaining height below the header */
+    width: 100%;
+    overflow: hidden; /* Important: Ensures scrollbars only appear inside your chat components, not the whole page */
+    background-color: var(--white-color, #f8f9fa);
+}
+/* for mobile screens */
+@media screen and (max-width: 768px) {
+    .mainScreen_Container {
+        flex-direction: column-reverse; 
+    }
+    .sidebar-section {
+        width: 100%;
+        height: 60px; 
+        min-width: auto;
+        flex-shrink: 0;
+    }
+    .main-section {
+        flex-grow: 1;
+        height: calc(100vh - 60px);
+        overflow: hidden;
+    }
+}

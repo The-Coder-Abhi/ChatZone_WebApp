@@ -1,0 +1,126 @@
+/* Container - Widen it and align items naturally */
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 700px; /* Wider for desktop so it doesn't look cramped */
+  margin: 0 auto; /* Keeps the whole column centered in the wide white space */
+  padding: 32px 24px;
+  box-sizing: border-box;
+}
+
+/* Header - Left align for a more natural reading flow */
+.search-header h2 {
+  margin: 0 0 20px 0;
+  font-size: 1.75rem;
+  color: #2c3e50;
+  font-weight: 700;
+  text-align: left; 
+}
+
+/* Search Bar Wrapper - Make it fill the width and match your brand colors */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5; /* Light gray standard for chat apps */
+  border-radius: 12px; /* Slightly squarer radius looks more modern */
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Match the focus state to your ChatZone cyan sidebar */
+.search-bar:focus-within {
+  background-color: #ffffff;
+  border-color: #00e5ff; 
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.15);
+}
+
+.search-icon {
+  font-size: 1.1rem;
+  color: #888;
+  margin-right: 12px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  border-radius: 50%;
+  transition: color 0.2s;
+}
+
+.clear-btn:hover {
+  color: #333;
+}
+
+/* Results & States */
+.search-results-container {
+  flex: 1;
+  margin-top: 24px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.search-state-message {
+  text-align: center;
+  padding: 40px 16px;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.search-state-message.placeholder {
+  color: #a0aec0;
+}
+
+/* Make sure the list stretches full width */
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Adds breathing room between users */
+  width: 100%;
+}
+/* Clickable Result Styling */
+.clickable-result {
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.2s ease;
+  /* Ensures no weird jumps in layout when background appears */
+  padding: 4px; 
+  margin: -4px; 
+}
+
+.clickable-result:hover {
+  background-color: #f0f2f5;
+}
+
+.clickable-result:active {
+  background-color: #e4e6e9; /* Slightly darker when tapped */
+}
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
+  .search-wrapper {
+    padding: 20px 16px;
+  }
+  
+  .search-header h2 {
+    font-size: 1.5rem;
+  }
+}

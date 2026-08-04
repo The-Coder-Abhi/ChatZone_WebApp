@@ -1,0 +1,21 @@
+.message-container{
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.sender{
+    background-color: var(--primary-color);
+    color: white;
+}
+.receiver{
+    background-color: #e0e0e0;
+    color: black;
+}
+.message-container p{
+    margin: 0;
+}
+.message-container span{
+    font-size: 10px;
+    opacity: 0.7;
+}

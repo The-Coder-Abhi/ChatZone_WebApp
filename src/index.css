@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    /* --primary-color:#22c0cb; */
+    --primary-color:#00E5FF;
+    --grey-color:#444444;
+    --white-color:#f7f7f7;
+    --bg-color:#ececec;
+    --bronze-color:#B07504;
+    --heading-font:"Permanent Marker", cursive;
+}
+html{
+    font-size: 90%;
+}
+body{
+    background-color: #f7f7f7;
+    color: var(--grey-color);
+    font-family: "Montserrat", sans-serif;
+    overflow:hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.app_Wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+.app_Container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.btn{
+    /* border: none; */
+    display: inline-block;
+    padding: 0.75rem 2.5rem;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    /* box-shadow: 0 0 1rem var(--grey-color); */
+    font-weight: 700;
+    color: var(--white-color);
+    letter-spacing: 2px;
+}
+.btn {
+  border: none; /* Removes the default button border */
+}
+
+/* Target the button when it is clicked or focused */
+.btn:focus, 
+.btn:active {
+  outline: none; /* Removes the black focus ring */
+}
+
+/* Hide the default browser calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/* Optional: Ensure the text box still looks clean and takes full width */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+}

@@ -1,0 +1,60 @@
+/* --- CUSTOM ALERT STYLES --- */
+.custom-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it sits on top of everything */
+}
+
+.custom-alert-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.3s ease-out;
+}
+
+.custom-alert-box h3 {
+    color: #ff4757; /* A nice red/pink color for alerts */
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.custom-alert-box p {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
+.custom-alert-box button {
+    background-color: #00E5FF;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.custom-alert-box button:hover {
+    background-color: #00cce6;
+}
+
+/* Quick animation for the alert box popping up */
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}

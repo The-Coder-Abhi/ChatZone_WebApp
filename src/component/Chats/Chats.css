@@ -1,0 +1,38 @@
+.chats-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.chats-container{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.chats{
+    width: 40%;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
+    overflow-y: auto;
+}
+.chats::-webkit-scrollbar{
+    display: none;
+}
+/* for mobile screen */
+@media screen and (max-width: 768px) {
+    .chats {
+        width: 100%; /* User list takes full width on mobile */
+    }
+    /* Hide the user list entirely if a chat is active on mobile */
+    .chat-is-active .chats {
+        display: none;
+    }
+}

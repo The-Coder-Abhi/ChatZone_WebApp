@@ -1,0 +1,116 @@
+.login-Wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url('../../img/doodles.png'); 
+  background-size: cover;
+  background-position: center; */
+  background-image: url(../../img/CatCity.png),radial-gradient(circle, #ffffff 30%, #73e0e8 100%);
+  background-size:cover; 
+  background-position: center;
+  background-blend-mode: multiply;
+}
+.login-Container {
+  background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  backdrop-filter: blur(12px); /* blurred background effect */
+  -webkit-backdrop-filter: blur(12px); /* For Safari support */
+  padding: 40px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.login-title {
+  /* font-family: 'Permanent Marker', cursive; Matches the marker-style font */
+  color: #00E5FF; /* Cyan color */
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-group label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 8px;
+  color: #000;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0; /* Light gray background */
+  border-bottom: 2px solid #a0a0a0; /* Darker gray bottom border */
+  padding: 10px 15px;
+  border-radius: 4px 4px 0 0;
+}
+.input-icon {
+  color: #666;
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.input-container input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+}
+
+.input-container input::placeholder {
+  color: #777;
+}
+
+.eye-icon {
+  color: #666;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* 5. Button */
+.login-btn {
+  background-color: #00E5FF;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #00cce6;
+  transform: translateY(-2px);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* 6. Bottom Text */
+.bottom-text {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #777;
+}
+
+.link {
+  color: #00E5FF;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
