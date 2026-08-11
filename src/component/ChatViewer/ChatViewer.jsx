@@ -9,6 +9,10 @@ const ChatViewer = ({ selectedUser, setSelectedUser }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
+  const currentHour = new Date().getHours();
+
+  const isFrozen = currentHour >= 0 && currentHour < 6;
+
   useEffect(() => {
     if (!selectedUser || !auth.currentUser) return;
 
@@ -69,12 +73,12 @@ const ChatViewer = ({ selectedUser, setSelectedUser }) => {
     }
   };
 
-  if (!selectedUser) {
+  if (!selectedUser || isFrozen) {
     return (
-      <div
-        className="chatViewer chatViewer-empty"
-      >
-        <h3>Select a chat to start messaging</h3>
+      <div className="chatViewer chatViewer-empty">
+        <h3>{isFrozen 
+        ? "Chats are currently frozen. Please come back at 6:00 AM." 
+        : "Select a chat to start messaging"}</h3>
       </div>
     );
   }

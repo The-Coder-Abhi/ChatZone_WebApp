@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import User from "../../img/User.png"
 import "./ChatRecyclerView.css"
 
-const ChatRecyclerView = ({ name, img, status, onClick }) => {
+const ChatRecyclerView = ({ name, img, status, onClick, isFrozen }) => {
     
   return (
-    <div className="chatRecyclerView_Wrapper" onClick={onClick} style={{cursor: 'pointer'}}>
+    <div className="chatRecyclerView_Wrapper" onClick={onClick} style={{ 
+        cursor: isFrozen ? 'not-allowed' : 'pointer', // Change cursor if frozen
+        opacity: isFrozen ? 0.5 : 1 // Dim the item if frozen
+      }}>
         <div className="chatRecyclerView_Container">
             <div className="user-profileImg">
                 <img src={img?img:User} alt="profileImage" />
