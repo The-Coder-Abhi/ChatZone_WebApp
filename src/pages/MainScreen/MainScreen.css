@@ -1,6 +1,6 @@
 .mainScreen_Wrapper {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden; /* Prevents the entire page from accidentally scrolling */
     background-color: var(--white-color, #ffffff); 
 }
@@ -51,7 +51,7 @@
     }
     .main-section {
         flex-grow: 1;
-        height: calc(100vh - 60px);
+        /* height: calc(100vh - 60px); */
         overflow: hidden;
     }
 }
