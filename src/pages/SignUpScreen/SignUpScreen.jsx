@@ -25,19 +25,19 @@ const SignUpScreen = () => {
   //reference for date input
   const dateInputRef = useRef(null);
 
-  const openDatePicker = () =>{
-    if (dateInputRef.current) {
-      try {
-        // Works on modern desktops and updated mobile browsers
-        dateInputRef.current.showPicker();
-      } catch (error) {
-        // Fallback for strict or older mobile browsers
-        console.warn("showPicker not supported, falling back to focus/click");
-        dateInputRef.current.focus();
-        dateInputRef.current.click();
-      }
-    }
-  };
+  // const openDatePicker = () =>{
+  //   if (dateInputRef.current) {
+  //     try {
+  //       // Works on modern desktops and updated mobile browsers
+  //       dateInputRef.current.showPicker();
+  //     } catch (error) {
+  //       // Fallback for strict or older mobile browsers
+  //       console.warn("showPicker not supported, falling back to focus/click");
+  //       dateInputRef.current.focus();
+  //       dateInputRef.current.click();
+  //     }
+  //   }
+  // };
 
   const [loading,setLoading] = useState(false);
 
@@ -137,13 +137,50 @@ const SignUpScreen = () => {
           {/* Birth Date Input */}
           <div className="input-group ">
             <label>Birth Date:</label>
-            <div className="input-container">
-              {/* <FaEnvelope className="input-icon" /> */}
+            <div className="input-container" style={{ position: 'relative' }}>
               <div className="input-with-icon">
                 <FaCalendarAlt className="input-icon" />
-                <input type="date" name="birthDate" placeholder="DD/MM/YY" onChange={handleChange} value={userData.birthDate} ref={dateInputRef} required/>
+                <span style={{ 
+                    flex: 1, 
+                    border: 'none', 
+                    background: 'transparent', 
+                    outline: 'none', 
+                    color: userData.birthDate ? '#333' : '#a9a9a9',
+                    fontSize: '1rem',
+                    textAlign: 'left'
+                }}>{userData.birthDate || "DD/MM/YY"}
+                </span>
               </div>
-            <button type="button" className='select-btn' onClick={openDatePicker}>Select</button>
+              
+            {/* Removed the onClick from the button, it is just visual now */}
+            <button type="button" className='select-btn'>Select</button>
+            
+              <input 
+                type="date" 
+                name="birthDate" 
+                onChange={handleChange} 
+                value={userData.birthDate} 
+                required
+                onClick={(e) => {
+                  try {
+                    // Forces the calendar to open on desktop
+                    e.target.showPicker();
+                  } catch (error) {
+                    // Fails silently on mobile, which is fine because 
+                    // the physical tap triggers the native mobile wheel anyway!
+                  }
+                }}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  opacity: 0,         
+                  cursor: 'pointer',
+                  zIndex: 10          
+                }}
+              />
             </div>
           </div>
 
