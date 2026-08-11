@@ -26,8 +26,16 @@ const SignUpScreen = () => {
   const dateInputRef = useRef(null);
 
   const openDatePicker = () =>{
-    if(dateInputRef.current){
-      dateInputRef.current.showPicker();
+    if (dateInputRef.current) {
+      try {
+        // Works on modern desktops and updated mobile browsers
+        dateInputRef.current.showPicker();
+      } catch (error) {
+        // Fallback for strict or older mobile browsers
+        console.warn("showPicker not supported, falling back to focus/click");
+        dateInputRef.current.focus();
+        dateInputRef.current.click();
+      }
     }
   };
 
