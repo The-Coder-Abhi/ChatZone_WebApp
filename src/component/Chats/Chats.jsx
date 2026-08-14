@@ -17,7 +17,7 @@ const Chats = () => {
 
   const currentHour = new Date().getHours();
 
-  const isFrozen = currentHour >= 0 && currentHour < 6;
+  const isFrozen = currentHour >= 0 && currentHour < 13;
 
   useEffect(() => {
     if (location.state?.chatUser) {
@@ -40,7 +40,7 @@ const Chats = () => {
     });
     return () => unsubscribe();
   },[]);
-  console.log(data);
+  // console.log(data);
 
   const handleChatClick = (item) => {
     if (isFrozen) {
