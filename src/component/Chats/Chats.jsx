@@ -17,7 +17,7 @@ const Chats = () => {
 
   const currentHour = new Date().getHours();
 
-  const isFrozen = currentHour >= 0 && currentHour < 13;
+  const isFrozen = currentHour >= 0 && currentHour < 12;
 
   useEffect(() => {
     if (location.state?.chatUser) {
